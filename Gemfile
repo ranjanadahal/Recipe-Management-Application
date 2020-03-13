@@ -12,6 +12,7 @@ gem 'rails', '~> 5.1.7'
 gem 'mysql2'
 # Use simple form 
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
+gem 'cocoon', '~> 1.2', '>= 1.2.14'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use bootstrap-sass file
