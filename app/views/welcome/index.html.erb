@@ -1,0 +1,21 @@
+<% @welcome.each_slice(3) do |welcomes| %>
+    <div class="row">
+    <h2> <u>List Recipe by Date</u></h2>
+      <% welcomes.each do |welcome| %>
+        <div class="col-md-4">
+          <div class="recipe">
+          
+            <div class="image_wrapper">
+              <%= link_to welcome do %>
+                <%= image_tag welcome.image.url, class: "recipe_image" %>
+              <% end %>
+            </div>
+            <h2>
+              <%= link_to welcome.title, welcome %>
+            </h2>
+            </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  

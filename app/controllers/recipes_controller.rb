@@ -1,11 +1,17 @@
 class RecipesController < ApplicationController
-    before_action :find_recipe, only: [:show, :edit, :update, :destroy]
+    before_action :find_recipe, only: [:show, :edit, :update,:destroy]
     before_action :authenticate_user!, except: [:index, :show]
     def index
-		@recipe = Recipe.all.order("created_at DESC")
-	end
+        if params.has_key?(:category)
+            @category= Category.find_by_name(params[:category])
+            @recipes =Recipe.where(category: @category)
+        else
+            @recipes = Recipe.all
+        end
+    end
     def show
     end
+   
     def new
         @recipe = current_user.recipes.build
     end
@@ -37,7 +43,7 @@ class RecipesController < ApplicationController
 
     private
     def recipe_params
-        params.require(:recipe).permit(:title, :description, :image, ingredients_attributes: [:id, :name, :_destroy], directions_attributes: [:id, :step, :_destroy])
+        params.require(:recipe).permit(:title, :description, :category_id,:user_id, :image, ingredients_attributes: [:id, :name, :_destroy], directions_attributes: [:id, :step, :_destroy])
 
     end
     def find_recipe
