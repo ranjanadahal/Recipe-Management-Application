@@ -14,6 +14,9 @@ class RecipesController < ApplicationController
         end
     end
     def show
+        @recipe = Recipe.find(params[:id])
+        count = @recipe.counter += 1
+        @recipe.update_attribute "counter", count
     end   
     def new
         @recipe = current_user.recipes.build
@@ -46,7 +49,7 @@ class RecipesController < ApplicationController
 
     private
     def recipe_params
-        params.require(:recipe).permit(:title, :description, :category_id,:user_id, :image, ingredients_attributes: [:id, :name, :_destroy], directions_attributes: [:id, :step, :_destroy])
+        params.require(:recipe).permit(:title, :description,:counter, :category_id,:user_id, :image, ingredients_attributes: [:id, :name, :_destroy], directions_attributes: [:id, :step, :_destroy])
 
     end
     def find_recipe
