@@ -9,22 +9,35 @@
   </head>
 
   <body>
-   <nav class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-brand">
-        <%= link_to "Recipe Management Application", root_path %>
-        
-      </div>
-      
-      <% if user_signed_in? %>
+  <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-brand">
+      <%= link_to "Recipe Application", root_path %>
+    </div>
+    <% if user_signed_in? %>
       <ul class="nav navbar-nav navbar-right">
-      
-      <% Category.all.each do |category| %>
+  <% Category.all.each do |category| %>
         <li>
-          <%= link_to category.name, recipes_path(category: category.name) %>
+            <%= link_to category.name, recipes_path(category: category.name) %>
         </li>
-    <% end %>
-</li>
+       <% end %>
+        <li>
+          <%= link_to "New Recipe", new_recipe_path %>
+        </li>
+        <li>
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+        </li>
+      </ul>
+      <%= form_for "", url:recipes_path, role:"search",method: :get do %>
+        <%= text_field_tag :search, @search_term, placeholder: "Search....",html: {class: "form-control mr-sm-2"} %>
+        <% end %>
+    <% else %>
+      <ul class="nav navbar-nav navbar-right">
+  <% Category.all.each do |category| %>
+        <li>
+            <%= link_to category.name, recipes_path(category: category.name) %>
+        </li>
+       <% end %>
         <li>
           <%= link_to "Sign Up", new_user_registration_path %>
         </li>
@@ -32,13 +45,13 @@
           <%= link_to "Sign In", new_user_session_path %>
         </li>
       </ul>
+  <%= form_for "", url:recipes_path, role:"search",method: :get do %>
+        <%= text_field_tag :search, @search_term, placeholder: "Search....",html: {class: "form-control mr-sm-2"} %>
+        <% end %>
     <% end %>
-    <%= form_for "", url:recipes_path, role:"search",method: :get do %>
-      <%= text_field_tag :search, @search_term, placeholder: "Search....",html: {class: "form-control mr-sm-2"} %>
-      <% end %>
-    
-    </div>
-  </nav>
+  </div>
+</nav>
+
   <div class="container">
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, class: "alert" %>
