@@ -33,6 +33,10 @@
         </li>
       </ul>
     <% end %>
+    <%= form_for "", url:recipes_path, role:"search",method: :get do %>
+      <%= text_field_tag :search, @search_term, placeholder: "Search....",html: {class: "form-control mr-sm-2"} %>
+      <% end %>
+    
     </div>
   </nav>
   <div class="container">

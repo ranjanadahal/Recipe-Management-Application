@@ -8,4 +8,8 @@ class Recipe < ApplicationRecord
  	accepts_nested_attributes_for :directions,reject_if: proc { |attributes| attributes['step'].blank? },allow_destroy: true
     validates :title, :description, :image, presence: true
     mount_uploader :image, ImageUploader
+
+    def self.search_by(search_term)
+        where("LOWER(title) LIKE :search_term" ,search_term: "%#{search_term.downcase}%")
+    end
 end

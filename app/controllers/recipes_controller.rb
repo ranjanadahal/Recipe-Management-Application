@@ -8,10 +8,13 @@ class RecipesController < ApplicationController
         else
             @recipes = Recipe.all
         end
+        if params[:search]
+            @search_term = params[:search]
+            @recipes= @recipes.search_by(@search_term)
+        end
     end
     def show
-    end
-   
+    end   
     def new
         @recipe = current_user.recipes.build
     end

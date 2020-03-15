@@ -22,6 +22,15 @@
 }
 
 $red: rgb(44, 27, 27);
+input#search {
+    height: calc(1.5em + 0.5rem + 6px);
+    padding: 1.25rem 0.5rem;
+    display: inline-block;
+    border: 1px solid #ced4da;
+    padding-top: 8px;
+	margin-top: 10px;
+	margin-left: 155px;
+}
 
 body {
 	background: rgb(235, 238, 243);
