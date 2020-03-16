@@ -1,6 +1,6 @@
 <% @welcome.each_slice(10) do |welcomes| %>
     <div class="row">
-    <h2> <u>List Recipe by Date</u></h2>
+    <h2> <u>List Recipe by Popularity</u></h2>
       <% welcomes.each do |welcome| %>
         <div class="col-md-4">
           <div class="recipe">
@@ -18,7 +18,4 @@
       <% end %>
     </div>
   <% end %>
-  <h2> 
-      <%= link_to "List Recipe by Popularity", popular_path %>
-  </h2>
   

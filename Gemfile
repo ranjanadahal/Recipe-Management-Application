@@ -22,7 +22,11 @@ gem 'cocoon'
 gem 'jquery-rails'
 gem 'carrierwave', '~> 2.0'
 gem 'devise'
+gem 'jquery-datatables'
 gem 'ajax-datatables-rails'
+
+
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes

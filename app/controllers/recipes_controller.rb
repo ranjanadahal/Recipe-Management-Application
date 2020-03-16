@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
     before_action :find_recipe, only: [:show, :edit, :update,:destroy]
-    before_action :authenticate_user!, except: [:index, :show]
+    before_action :authenticate_user!, except: [:index]
     def index
         if params.has_key?(:category)
             @category= Category.find_by_name(params[:category])
@@ -12,6 +12,7 @@ class RecipesController < ApplicationController
             @search_term = params[:search]
             @recipes= @recipes.search_by(@search_term)
         end
+        
     end
     def show
         @recipe = Recipe.find(params[:id])

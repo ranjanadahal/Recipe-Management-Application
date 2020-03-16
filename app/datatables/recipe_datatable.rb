@@ -7,6 +7,7 @@ class RecipeDatatable < ApplicationDatatable
         column << recipe.title
         column << recipe.descreption
         column << recipe.category.name
+        column << recipe.ingredient.name
        end 
     end
   end
@@ -15,7 +16,6 @@ class RecipeDatatable < ApplicationDatatable
     User.find(option[:user][:id]).recipes.count  
   end
 
- 
   def recipes
     @recipes ||= fetch_recipes.order("recipes.#{sort_column} #{sort_direction}").page(page).per(per_page)
   end
@@ -31,14 +31,12 @@ class RecipeDatatable < ApplicationDatatable
     recipes.where(search_string.join(' or '), search: "%#{params[:search][:value]}%")
   end
 
-
   def total_entries
     User.find(option[:user][:id]).recipes.count
   end
-
-
+  
   def columns
-    %w(id title descreption category)
+    %w(id title descreption category_id ingredient_id)
   end
 
 end
