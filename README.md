@@ -7,21 +7,21 @@ Recipe Management Application is simple web application written in ruby on rails
 ## **System dependencies**
 
 ```
-gem 'rails', '~> 5.1.7'<br/>
-gem 'mysql2'<br/>
-gem 'simple_form', '~> 5.0', '>= 5.0.2'<br/>
-gem 'puma', '~> 3.7'<br/>
-gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'<br/>
-gem 'sass-rails', '~> 5.0'<br/>
-gem 'cocoon'<br/>
-gem 'jquery-rails'<br/>
-gem 'carrierwave', '~> 2.0'<br/>
-gem 'devise'<br/>
-gem 'jquery-datatables'<br/>
-gem 'ajax-datatables-rails'<br/>
-gem 'uglifier', '>= 1.3.0'<br/>
-gem 'coffee-rails', '~> 4.2'<br/>
-gem 'jbuilder', '~> 2.5'<br />
+gem 'rails', '~> 5.1.7'
+gem 'mysql2'
+gem 'simple_form', '~> 5.0', '>= 5.0.2'
+gem 'puma', '~> 3.7'
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+gem 'sass-rails', '~> 5.0'
+gem 'cocoon'
+gem 'jquery-rails'
+gem 'carrierwave', '~> 2.0'
+gem 'devise'
+gem 'jquery-datatables'
+gem 'ajax-datatables-rails'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.2'
+gem 'jbuilder', '~> 2.5'
 
 ```
 
