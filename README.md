@@ -6,6 +6,7 @@ Recipe Management Application is simple web application written in ruby on rails
 
 ## **System dependencies**
 
+```
 gem 'rails', '~> 5.1.7'<br/>
 gem 'mysql2'<br/>
 gem 'simple_form', '~> 5.0', '>= 5.0.2'<br/>
@@ -21,6 +22,8 @@ gem 'ajax-datatables-rails'<br/>
 gem 'uglifier', '>= 1.3.0'<br/>
 gem 'coffee-rails', '~> 4.2'<br/>
 gem 'jbuilder', '~> 2.5'<br />
+
+```
 
 # **Configuration**
 
