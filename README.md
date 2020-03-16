@@ -1,6 +1,6 @@
 # **Recipe Management Application**
 
-## Recipe Management Application is simple web application written in ruby on rails framework.
+Recipe Management Application is simple web application written in ruby on rails framework.
 
 # **Directions on how to deploy**
 
@@ -19,8 +19,8 @@ gem 'devise'<br/>
 gem 'jquery-datatables'<br/>
 gem 'ajax-datatables-rails'<br/>
 gem 'uglifier', '>= 1.3.0'<br/>
-gem 'coffee-rails', '~> 4.2'<br/
-gem 'jbuilder', '~> 2.5'
+gem 'coffee-rails', '~> 4.2'<br/>
+gem 'jbuilder', '~> 2.5'<br />
 
 # **Configuration**
 
@@ -67,7 +67,7 @@ None - yet
 # **Deployment instructions**
 
 Install all the gems and bundle bundle install<br/>
- To create database run rake db:create<br/>
+To create database run rake db:create<br/>
 To create model rails g model Model_name attribute_with_datatype<br/>
 Run rake db:migrate<br/>
 To create controller rails g controller controller_name <br/>
