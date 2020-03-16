@@ -37,7 +37,7 @@ I use mysql2 for test and development.
 
 Add gem 'mysql2' on gemfile<br/>
 Add under config/database.yml file<br/>
-
+```
 development:<br/>
   adapter: mysql2<br/>
   host: localhost<br/>
@@ -58,7 +58,7 @@ production:<br/>
   username: root<br/>
   password: password<br/>
   database: Recipe_Management_Application_prod <br/>
-
+```
 # **How to run the test suite**
 
 bundle exec rspec
@@ -69,11 +69,11 @@ None - yet
 
 # **Deployment instructions**
 
-Install all the gems and bundle bundle install<br/>
-To create database run rake db:create<br/>
-To create model rails g model Model_name attribute_with_datatype<br/>
-Run rake db:migrate<br/>
-To create controller rails g controller controller_name <br/>
+Install all the gems and bundle ``` bundle install ```<br/>
+To create database run ``` rake db:create```<br/>
+To create model ```rails g model Model_name attribute_with_datatype```<br/>
+Run rake``` db:migrate```<br/>
+To create controller``` rails g controller controller_name``` <br/>
 Set the carrierwave gem to upload image<br/>
 Cocoon gem is use for Nested forms<br/>
 Datatable has ability to paginate, sort, and search html tables<br/>
