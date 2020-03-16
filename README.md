@@ -38,26 +38,26 @@ I use mysql2 for test and development.
 Add gem 'mysql2' on gemfile<br/>
 Add under config/database.yml file<br/>
 ```
-development:<br/>
-  adapter: mysql2<br/>
-  host: localhost<br/>
-  username: root<br/>
-  password: password<br/>
-  database: Recipe_Management_Application_dev<br/>
+development:
+  adapter: mysql2
+  host: localhost
+  username: root
+  password: password
+  database: Recipe_Management_Application_dev
  
-test:<br/>
-  adapter: mysql2<br/>
-  host: localhost<br/>
-  username: root<br/>
-  password: password<br/>
-  database: Recipe_Management_Application_test <br/>
+test:
+  adapter: mysql2
+  host: localhost
+  username: root
+  password: password
+  database: Recipe_Management_Application_test 
 
-production:<br/>
-  adapter: mysql2<br/>
-  host: localhost<br/>
-  username: root<br/>
-  password: password<br/>
-  database: Recipe_Management_Application_prod <br/>
+production:
+  adapter: mysql2
+  host: localhost
+  username: root
+  password: password
+  database: Recipe_Management_Application_prod 
 ```
 # **How to run the test suite**
 
@@ -78,9 +78,9 @@ Set the carrierwave gem to upload image<br/>
 Cocoon gem is use for Nested forms<br/>
 Datatable has ability to paginate, sort, and search html tables<br/>
 Clone the repo and cd into Recipe_Management_Application<br/>
-Git add .<br/>
-Git commit -m “comment”<br/>
-Git push<br/>
+```git add .
+git commit -m “comment”
+git push```
 Run rails server and go to locolhost:3000<br/>
 
 
