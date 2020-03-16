@@ -78,10 +78,12 @@ Set the carrierwave gem to upload image<br/>
 Cocoon gem is use for Nested forms<br/>
 Datatable has ability to paginate, sort, and search html tables<br/>
 Clone the repo and cd into Recipe_Management_Application<br/>
-```git add .
+```
+git add .
 git commit -m “comment”
-git push```
-Run rails server and go to locolhost:3000<br/>
+git push
+```
+Run rails server and go to locolhost:3000
 
 
 
