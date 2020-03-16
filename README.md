@@ -36,26 +36,26 @@ I use mysql2 for test and development.
 Add gem 'mysql2' on gemfile<br/>
 Add under config/database.yml file<br/>
 
-development:
-  adapter: mysql2
-  host: localhost
-  username: root
-  password: password
-  database: Recipe_Management_Application_dev
+development:<br/>
+  adapter: mysql2<br/>
+  host: localhost<br/>
+  username: root<br/>
+  password: password<br/>
+  database: Recipe_Management_Application_dev<br/>
  
-test:
-  adapter: mysql2
-  host: localhost
-  username: root
-  password: password
-  database: Recipe_Management_Application_test 
+test:<br/>
+  adapter: mysql2<br/>
+  host: localhost<br/>
+  username: root<br/>
+  password: password<br/>
+  database: Recipe_Management_Application_test <br/>
 
-production:
-  adapter: mysql2
-  host: localhost
-  username: root
-  password: password
-  database: Recipe_Management_Application_prod 
+production:<br/>
+  adapter: mysql2<br/>
+  host: localhost<br/>
+  username: root<br/>
+  password: password<br/>
+  database: Recipe_Management_Application_prod <br/>
 
 # **How to run the test suite**
 
