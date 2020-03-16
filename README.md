@@ -1,10 +1,10 @@
-Recipe Management Application
+# **Recipe Management Application**
 
-Recipe Management Application is simple web application written in ruby on rails framework.
+### Recipe Management Application is simple web application written in ruby on rails framework.
 
-Directions on how to deploy
+# **Directions on how to deploy**
 
-System dependencies
+## **System dependencies**
 
 gem 'rails', '~> 5.1.7'
 gem 'mysql2'
@@ -23,15 +23,15 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
-Configuration
+# **Configuration**
 
 I used erb to write the code.
 
-Database creation
+# **Database creation**
 
 I use mysql2 for test and development.
 
-Database initialization
+# **Database initialization**
 
 Add gem 'mysql2' on gemfile
 Add under config/database.yml file
@@ -57,15 +57,15 @@ production:
   password: password
   database: Recipe_Management_Application_prod 
 
-How to run the test suite
+# **How to run the test suite**
 
 bundle exec rspec
 
-Services (job queues, cache servers, search engines, etc.)
+# **Services (job queues, cache servers, search engines, etc.)**
 
 None - yet
 
-Deployment instructions
+# **Deployment instructions**
 
 Install all the gems and bundle bundle install
  To create database run rake db:create
