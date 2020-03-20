@@ -24,7 +24,11 @@
 	box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
 }
 
-$red: rgb(44, 27, 27);
+$red: rgb(107, 45, 45);
+.input.string.optional.category_name {
+    margin-left: -14px;
+    padding-right: 881px;
+}
 input#search {
     height: calc(1.5em + 0.5rem + 6px);
     padding: 1.25rem 0.5rem;
@@ -32,7 +36,7 @@ input#search {
     border: 1px solid #ced4da;
     padding-top: 8px;
 	margin-top: 10px;
-	margin-left: 296px;
+	margin-left: 50px;
 }
 
 body {

@@ -1,12 +1,12 @@
 class Recipe < ApplicationRecord
     belongs_to :category
     belongs_to :user
-    has_many :ingredients
-    has_many :directions
+    has_many :ingredients, :dependent => :destroy
+    has_many :directions, :dependent => :destroy
     has_many :comments, dependent: :destroy
     accepts_nested_attributes_for :ingredients, reject_if: proc { |attributes| attributes['name'].blank? },allow_destroy: true
  	accepts_nested_attributes_for :directions,reject_if: proc { |attributes| attributes['step'].blank? },allow_destroy: true
-    validates :title, :description, :image, presence: true
+    validates :title, :description, :category_id, :image, presence: true
     mount_uploader :image, ImageUploader
 
     def self.search_by(search_term)

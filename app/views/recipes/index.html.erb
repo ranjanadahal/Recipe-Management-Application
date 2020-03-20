@@ -6,7 +6,7 @@
       <th scope="col">Descreption</th>
       <th scope="col">Category</th>
       <th scope="col">Ingredients</th>
-      <th colspan="3"></th>
+      <th colspan="3">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -18,9 +18,9 @@
       <td><% recipe.ingredients.each do |ingredient| %>
           <%= ingredient.name %>
       <% end %> </td>
-      <td><%= link_to 'Show', recipe_path(recipe) %></td>
-      <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-      <td><%= link_to 'Destroy', recipe_path(recipe),
+      <td><%= link_to 'Show', recipe_path(recipe),class: "btn btn-primary" %></td>
+      <td><%= link_to 'Edit', edit_recipe_path(recipe),class: "btn btn-info" %></td>
+      <td><%= link_to 'Destroy', recipe_path(recipe), class: "btn btn-danger",
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
     </tr>
