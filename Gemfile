@@ -13,7 +13,7 @@ gem 'mysql2'
 # Use simple form 
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
 # Use Puma as the app server
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 4.3'
 # Use bootstrap-sass file
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 # Use SCSS for stylesheets
